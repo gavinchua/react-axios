@@ -17,8 +17,8 @@ class FullPost extends Component {
               loadedPost: response.data
             });
           });
-      }
-    }
+      };
+    };
   }
 
   deletePostHandler = () => {
@@ -48,7 +48,7 @@ class FullPost extends Component {
     };
 
     return post;
-  }
-}
+  };
+};
 
 export default FullPost;

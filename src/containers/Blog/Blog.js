@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-import axios from '../../axios';
 import Post from '../../components/Post/Post';
 import FullPost from '../../components/FullPost/FullPost';
 import NewPost from '../../components/NewPost/NewPost';
@@ -22,7 +22,7 @@ class Blog extends Component {
           return {
             ...post,
             author: 'Max'
-          }
+          };
         });
         this.setState({
           posts: updatedPosts
@@ -34,6 +34,12 @@ class Blog extends Component {
           error: true
         });
       });
+  }
+
+  postSelectedHandler = (id) => {
+    this.setState({
+      selectedPostId: id
+    });
   }
 
   render() {
@@ -65,7 +71,7 @@ class Blog extends Component {
         </section>
       </div>
     );
-  }
-}
+  };
+};
 
 export default Blog;

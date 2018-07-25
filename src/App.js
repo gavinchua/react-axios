@@ -9,7 +9,7 @@ class App extends Component {
         <Blog />
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;
